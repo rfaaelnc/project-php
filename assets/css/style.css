@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #DDDDDD;
+}
+
+html {
+    box-sizing:border-box;
+    font-size: 10px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+*,*:before,*:after {
+    box-sizing:inherit;
+}
+
+a {
+    color:#777777;
+    text-decoration:none;
+    font-size:1.4rem;
+}
+
+ul {
+    list-style:none;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+h5 {
+  color: #3F3F3F;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* begin header */
+
+.l-header {
+  margin-bottom: 33px;
+}
+
+.l-header__container {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    /* justify-content: space-between; */
+    border-bottom: 1px solid #808080;
+    padding-bottom: 1px;
+}
+
+.l-header__box {
+    flex: 1;
+}
+
+.l-header__box.l-header__logo {
+    background-color: #3C4950;
+    max-width: 274px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-header__box.l-header__logo h1 {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+}
+
+.l-header__title--secondary {
+    color: #777777;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding-left: 20px;
+}
+
+.l-header__title--secondary a {
+    font-size: 1.8rem;
+}
+
+.l-header__box.l-header__actions {
+    text-align: right;
+    padding-right: 41px;
+}
+
+.l-header__link {
+    color: #777777;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* end header */
+
+
+
+.poll__item {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 68px;
+  background-color: #D3D3D3;
+  padding-right: 20px;
+  margin-bottom: 12.5px;
+}
+
+@media screen and (max-width: 991px) {
+
+   .poll__item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        height: auto;
+    }
+
+}
+
+
+.poll__item h3 {
+  min-width: 100px;
+}
+
+.poll__title {
+    color: #000000;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-left: 67px;
+}
+
+@media screen and (max-width: 991px) {
+
+    .poll__title {
+        color: #000000;
+        font-size: 2.1rem;
+        font-weight: 400;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+}
+.poll-list {
+    max-width: 416px;
+    margin: 0 auto;
+}
+
+.progressbar {
+    position: relative;
+    background: #ECECEC;
+    margin-bottom: 3px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progressbar__content {
+    position: relative;
+    z-index: 1;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 43px;
+}
+
+/*.progressbar:before {content: "";position: absolute;background: #E5E5E5;display: block;width: 40%;height: 51px;z-index: 0;}*/
+
+.progressbar__bg {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    background-color: #E5E5E5;
+    height: 100%;
+    width: 0%;
+    transition: all 350ms ease;
+
+}
+
+.progressbar__text {
+    margin-left: 31px;
+}
+
+.progressbar__amount {
+    color: #3F3F3F;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.poll__container {
+  background-color: #F7F6F6;
+  padding: 15px 20px;
+}
+.poll__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poll__actions--btns {
+    margin-top: 15px;
+}
+
+.poll__actions--bottom {
+  padding: 0 15px;
+  margin-top: 77px;
+}
+
+.poll__actions a:not(:first-child),
+.poll__actions button:not(:first-child) {
+  margin-left: 10.5px;
+}
+
+.button__primary {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: #3C4950;
+    border-radius: 8px;
+    padding: 0 15px;
+}
+
+.button__primary--auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+}
+
+.button__primary--small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 214px;
+    height: 40px;
+}
+
+.button__primary--large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 532px;
+    height: 58px;
+}
+
+
+.button__secondary {
+    color: #3C4950;
+    font-size: 1.8rem;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid #3C4950;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+
+.button__secondary--small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 154.46px;
+    height: 33px;
+}
+
+.button--back {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #000;
+}
+
+.share-link {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.share-link > a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+}
+
+
+/* form */
+
+form.form-poll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.input__group {
+    margin-bottom: 10px;
+}
+
+.input__list {
+    width: 100%;
+    max-width: 399px;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    margin-top: 5px;
+    border: 0;
+    background-color: #ECECEC;
+}
+
+label {
+    font-size: 1.8rem;
+    line-height: normal;
+}
+
+
+.text__center {
+  text-align: center;
+}
+/**/
+
+.l-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  height: 60px;
+}
+
+.l-footer__copy {
+  font-size: 1.4rem;
+}
+
+
+
+.page__login {
+    align-items: center;
+    justify-content: center;
+    background-color: #3C4950;
+}
+
+.page__login main.l-main {
+    width: 100%;
+    margin: auto;
+}
+
+.page__login .l-footer__copy {
+    color: #FFFFFF;
+}
+
+
+section.login {
+    width: 100%;
+    max-width: 380px;
+    background: #D3D3D3;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.login__button {
+  width: 100%;
+}
+.login__group {
+    margin-bottom: 15px;
+}
+
+.modal__footer {
+    display: flex;
+    margin-top: 15px;
+}
+
+.modal__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #8F9287;
+    margin: auto;
+    align-self: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.modal__foter {
+    display: flex;
+}
+
+.modal__footer a[class^="button"]:not(:first-child) {
+    margin-left: 15px;
+}
+
+.modal__mesagge {
+    font-size: 1.8rem;
+}
+
+.modal {
+    position: absolute;
+    z-index: 1000;
+    top: -10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.modal.has-active {
+    display: flex;
+}
